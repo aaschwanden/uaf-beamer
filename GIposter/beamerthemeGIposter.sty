@@ -1,0 +1,258 @@
+% This style was created by:
+%
+%    Andy Aschwanden
+%    Arctic Region Supercomputing Center
+%    University of Fairbanks Alaska
+%    andy.aschwanden@arsc.edu
+%
+% History:
+%
+%   June  09 created
+%   07/09/09 set uaf blue to caption name, UAF & GI logo sizes changes
+
+\ProvidesPackage{beamerthemeGIposter} % this style was created by Andy Aschwanden
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\selectcolormodel{cmyk}
+\mode<presentation>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% custom colors
+\definecolor{uaf yellow}{cmyk}{0,0.16,1,0}
+\definecolor{light yellow}{cmyk}{0.01,0,0.16,0}
+\definecolor{uaf blue}{cmyk}{1,0.66,0,0.02}
+\definecolor{light blue}{cmyk}{0.22,0.11,0,0}
+
+% headline colors and fonts
+\setbeamercolor{headline}{fg=white,bg=uaf yellow}
+\setbeamercolor{title in headline}{fg=uaf blue}
+\setbeamercolor{author in headline}{fg=uaf blue}
+\setbeamercolor{institute in headline}{fg=uaf blue}
+\setbeamercolor{logo in headline}{fg=black,bg=uaf blue}
+\setbeamercolor{separation line}{bg=uaf blue}
+
+% footline colors and fonts
+\setbeamercolor{footline}{fg=uaf blue,bg=uaf yellow}
+\setbeamerfont{footline}{fg=black, size=\normalsize}
+
+% body colors and fonts
+\setbeamercolor*{normal text}{fg=black,bg=white}
+
+% block environment
+\setbeamercolor*{block body}{bg=light yellow,fg=black}
+\setbeamercolor*{block title}{fg=uaf yellow,bg=uaf blue}
+\setbeamerfont{block title}{size=\large,series=\sc}
+
+% example environment
+\setbeamercolor*{example title}{fg=white,bg=uafcolorscheme1}
+\setbeamerfont{example title}{size=\large,series=\bf,bg=uafcolorscheme1,fg=white}
+
+
+%\setbeamercolor*{example body}{fg=white,bg=uafcolorscheme4}
+%\setbeamercolor*{example title}{fg=white,bg=uafcolorscheme1}
+
+
+%  \setbeamercolor{framesubtitle}{fg=ta3orange, bg=ta2gray}
+%  \setbeamercolor{author in head/foot}{fg=tabutter, bg=black}
+%  \setbeamercolor{title in head/foot}{bg=tabutter, fg=black}
+
+
+\setbeamercolor{alerted text}{fg=uaf blue}
+\setbeamercolor{caption name}{fg=uaf blue}
+
+%\setbeamercolor{structure}{fg=uafblue}
+
+%  \setbeamertemplate{itemize/enumerate body begin}{
+%  }
+%  \setbeamertemplate{itemize/enumerate body end}{
+%  }
+
+\setbeamertemplate{itemize items}[triangle]
+\setbeamertemplate{navigation symbols}{}  % no navigation on a poster
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{block begin}{
+  \vskip5.75ex
+  \begin{beamercolorbox}[leftskip=1cm,colsep*=.75ex]{block title}%
+    \usebeamerfont*{block title}\insertblocktitle
+  \end{beamercolorbox}%
+  {\ifbeamercolorempty[bg]{block body}{}{\nointerlineskip\vskip-0.5pt}}%
+  \usebeamerfont{block body}%
+  \begin{beamercolorbox}[colsep*=.75ex,sep=.75ex,vmode]{block body}%
+    \ifbeamercolorempty[bg]{block body}{\vskip-.25ex}{\vskip-.75ex}\vbox{}%
+  }
+  \setbeamertemplate{block end}{
+    \end{beamercolorbox}
+  }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{headline}{  
+  \leavevmode
+
+  \begin{beamercolorbox}[wd=\paperwidth]{headline}
+    \begin{columns}[c]
+      \begin{column}{.02\paperwidth}
+      \end{column}
+      \begin{column}{.15\paperwidth}
+        %\begin{center}
+          \includegraphics[height=12cm]{GI_logo_color}
+          %\includegraphics[height=6cm]{logo_hpcmp_st}
+        %\end{center}
+        \vskip1ex
+      \end{column}
+      \begin{column}{.66\paperwidth}
+        \vskip4ex
+        %\raggedleft
+        \begin{center}
+        \usebeamercolor{title in headline}{\color{fg}\textbf{\LARGE{\inserttitle}}\\[5ex]}
+        \usebeamercolor{author in headline}{\color{fg}\large{\insertauthor}\\[2ex]}
+        \usebeamercolor{institute in headline}{\color{fg}\large{\insertinstitute}\\[2ex]}   
+        \end{center} 
+        \vskip1ex
+      \end{column}
+      \begin{column}{.15\paperwidth}
+        \vskip1cm
+        %\begin{center}
+          \includegraphics[height=6cm]{logo_uaf}
+        %\end{center}
+        \vskip1.5cm
+      \end{column}
+      \begin{column}{.02\paperwidth}
+      \end{column}
+    \end{columns}
+  \end{beamercolorbox}
+  
+%%      \begin{beamercolorbox}[sep=0.1cm,wd=.1\paperwidth,center]{logo in headline}
+%%        \vskip2ex
+%%      \end{beamercolorbox}  
+%%      \begin{beamercolorbox}[sep=1cm,wd=.7\paperwidth]{headline}
+%%        \usebeamercolor{title in headline}{\raggedright\color{fg}\textbf{\LARGE{\inserttitle}}\\[1ex]}
+%%        \usebeamercolor{author in headline}{\raggedright\color{fg}\large{\insertauthor}\\[1ex]}
+%%        \usebeamercolor{institute in headline}{\raggedright\color{fg}\large{\insertinstitute}\\[1ex]}     
+%%      \end{beamercolorbox}%
+%%      \begin{beamercolorbox}[sep=0.1cm,wd=.18\paperwidth,center]{logo in headline}
+%%        \includegraphics[height=5cm]{logos/rwth-hks44}
+%%        \vskip2ex
+%%      \end{beamercolorbox}  
+%%    \end{beamercolorbox}
+  
+  \begin{beamercolorbox}[wd=\paperwidth]{lower separation line head}
+    \rule{0pt}{5pt}
+  \end{beamercolorbox}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{footline}{
+  \begin{beamercolorbox}[wd=\paperwidth]{upper separation line foot}
+    \rule{0pt}{5pt}
+  \end{beamercolorbox}
+  
+  \begin{beamercolorbox}[ht=4ex,leftskip=1cm,rightskip=1cm]{footline}%
+  Oh no, Steve Jobs doesn't like my cell phone!
+    \vskip1ex
+  \end{beamercolorbox}
+
+  \begin{beamercolorbox}[wd=\paperwidth]{lower separation line foot}
+    \rule{0pt}{5pt}
+  \end{beamercolorbox}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Additions by Andy Aschwanden
+% 
+% 09/20: currently, the block environment works not with multicols
+%            so we use pbox instead
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\newsavebox{\dummybox}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                pbox                          %%%             
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlength{\fboxrule}{1pt}
+
+\newenvironment{pbox}[3][white]{%
+  %\definecolor{boxcolor}{rgb}{#1}
+  \gdef\@bcolor{#1}
+  \setlength{\fboxsep}{0.005\paperwidth}
+  \centering
+  \begin{lrbox}{\dummybox}%
+    \begin{minipage}{0.92\linewidth}
+      \color{#3}{\textsf{\LARGE #2}}\color{black} \vspace{0.5em}\\ \small}{%
+    \end{minipage}
+  \end{lrbox}
+  \raisebox{-\depth}{\hspace{-0.5em} 
+    \fbox{\colorbox{\@bcolor}{\usebox{\dummybox}}}}
+  \vspace{1.2em} \vfill}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                pbox   no frame              %%%             
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newenvironment{pboxnf}[3][white]{%
+  %\definecolor{boxcolor}{rgb}{#1}
+  \gdef\@bnfcolor{#1}
+  \setlength{\fboxsep}{0.005\paperwidth}
+  \centering
+  \begin{lrbox}{\dummybox}%
+    \begin{minipage}{0.96\linewidth}
+      \color{#3}{\LARGE #2}\color{black} \vspace{0.5em}\\ \small}{%
+    \end{minipage}
+  \end{lrbox}
+  \raisebox{-\depth}{\hspace{-0.5em} 
+    \colorbox{\@bnfcolor}{\usebox{\dummybox}}}
+  \vspace{1.2em} \vfill}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                pbbox                         %%%             
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newenvironment{pbbox}[2][white]{%
+  %\definecolor{boxcolor}{rgb}{#1}
+  \gdef\@bbcolor{#1}
+  \setlength{\fboxsep}{0mm}
+  %\centering
+  \begin{lrbox}{\dummybox}%
+    \begin{minipage}{#2}
+      \large}{%
+    \end{minipage}
+  \end{lrbox}
+  \raisebox{-\depth}{\hspace{-.5em} 
+    \fbox{\colorbox{\@bbcolor}{\usebox{\dummybox}}}}
+  \vspace{0.5em} \vfill}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                pbbox   no frame              %%%             
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newenvironment{pbboxnf}[2][white]{%
+  %\definecolor{boxcolor}{rgb}{#1}
+  \gdef\@bbnfcolor{#1}
+  \setlength{\fboxsep}{4mm}
+  %\centering
+  \begin{lrbox}{\dummybox}%
+    \begin{minipage}{#2}
+      \large}{%
+    \end{minipage}
+  \end{lrbox}
+  \raisebox{-\depth}{\hspace{-0.5em} 
+    \colorbox{\@bbnfcolor}{\usebox{\dummybox}}}
+  \vspace{0.5em} \vfill}
+
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mode<all>
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "poster"
+%%% TeX-PDF-mode: t
+%%% End: 
