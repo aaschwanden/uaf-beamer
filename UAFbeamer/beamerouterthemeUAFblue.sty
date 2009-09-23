@@ -38,22 +38,22 @@
 \DeclareOptionBeamer{footline}{      
 	\defbeamertemplate*{footline}{UAFblue theme}
 	{  
-	    \begin{beamercolorbox}[wd=\paperwidth,ht=.25pt]{foot line}
-    		\rule{\paperwidth}{.25pt}
-  	   \end{beamercolorbox}	
+	    %\begin{beamercolorbox}[wd=\paperwidth,ht=.25pt]{foot line}
+    	%	\rule{\paperwidth}{.25pt}
+  	%   \end{beamercolorbox}	
 	  %\pgfuseshading{beamer@footlineshade}%
 	  \hskip-\paperwidth% 
 	  \vskip-3.25ex%
 	  \leavevmode% 
  
 	  \hbox{%
-	  \begin{beamercolorbox}[wd=.25\paperwidth,ht=2.25ex,dp=1ex,left]{frametitle}%
+	  \begin{beamercolorbox}[wd=.25\paperwidth,ht=2.25ex,dp=1ex,left]{title}%
 	    \usebeamerfont{section in head/foot}\hspace*{1ex}\insertsectionhead\hspace*{2ex}
 	  \end{beamercolorbox}%
-	  \begin{beamercolorbox}[wd=.45\paperwidth,ht=2.25ex,dp=1ex,left]{frametitle}%
+	  \begin{beamercolorbox}[wd=.45\paperwidth,ht=2.25ex,dp=1ex,left]{title}%
 	    \usebeamerfont{subsection in head/foot}\insertsubsectionhead
 	  \end{beamercolorbox}%
-	  \begin{beamercolorbox}[wd=.30\paperwidth,ht=2.25ex,dp=1ex,right]{frametitle}%
+	  \begin{beamercolorbox}[wd=.30\paperwidth,ht=2.25ex,dp=1ex,right]{title}%
 	    \usebeamerfont{date in head/foot}
 	    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
 	  \end{beamercolorbox}}%
