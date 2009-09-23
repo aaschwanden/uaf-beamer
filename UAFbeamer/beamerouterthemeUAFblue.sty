@@ -14,7 +14,7 @@
 \usebeamercolor{arsc green}
 
 \pgfdeclarehorizontalshading[white,arsc blue]{beamer@footlineshade}{3.25ex}{%
-  color(0pt)=(white);
+  color(0pt)=(arsc blue);
   color(\paperwidth)=(arsc blue)}
 
 
@@ -41,19 +41,19 @@
 	    %\begin{beamercolorbox}[wd=\paperwidth,ht=.25pt]{foot line}
     	%	\rule{\paperwidth}{.25pt}
   	%   \end{beamercolorbox}	
-	  %\pgfuseshading{beamer@footlineshade}%
+	  \pgfuseshading{beamer@footlineshade}%
 	  \hskip-\paperwidth% 
 	  \vskip-3.25ex%
 	  \leavevmode% 
  
 	  \hbox{%
-	  \begin{beamercolorbox}[wd=.25\paperwidth,ht=2.25ex,dp=1ex,left]{title}%
+	  \begin{beamercolorbox}[wd=.25\paperwidth,ht=2.25ex,dp=1ex,left]{section in head/foot}%
 	    \usebeamerfont{section in head/foot}\hspace*{1ex}\insertsectionhead\hspace*{2ex}
 	  \end{beamercolorbox}%
-	  \begin{beamercolorbox}[wd=.45\paperwidth,ht=2.25ex,dp=1ex,left]{title}%
+	  \begin{beamercolorbox}[wd=.45\paperwidth,ht=2.25ex,dp=1ex,left]{section in head/foot}%
 	    \usebeamerfont{subsection in head/foot}\insertsubsectionhead
 	  \end{beamercolorbox}%
-	  \begin{beamercolorbox}[wd=.30\paperwidth,ht=2.25ex,dp=1ex,right]{title}%
+	  \begin{beamercolorbox}[wd=.30\paperwidth,ht=2.25ex,dp=1ex,right]{section in head/foot}%
 	    \usebeamerfont{date in head/foot}
 	    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
 	  \end{beamercolorbox}}%
