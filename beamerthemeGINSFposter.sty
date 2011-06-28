@@ -1,25 +1,24 @@
 % This style was created by:
 %
+%	Joseph H Kennedy
+%	Physics Department
+%	University of Alaska Fairbanks
+%	jhkennedy@alaska.edu
+%
+%	This style was based on a the GIposter style created by:
+%
 %    Andy Aschwanden
 %    Arctic Region Supercomputing Center
 %    University of Fairbanks Alaska
 %    andy.aschwanden@arsc.edu
 %
-%    and
-%
-%	Joseph H Kennedy
-%	Physics Department
-%	University of Alaska Fairbanks
-%	jhkennedy@alaska.edu
-
-
 % History:
 %
 %   June  09 created
 %   07/09/09 set uaf blue to caption name, UAF & GI logo sizes changes
 %   04/26/10 logos have relative size now
-%   06/28/11 colorscheme from Joe Kennedy, for legacy, yellow scheme available as GIposterYellow
-\ProvidesPackage{beamerthemeGIposter} % this style was created by Andy Aschwanden
+
+\ProvidesPackage{beamerthemeGINSFposter} % this style was created by Andy Aschwanden
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \selectcolormodel{cmyk}
@@ -42,7 +41,7 @@
 \setbeamercolor{separation line}{bg=uaf blue}
 
 % footline colors and fonts
-\setbeamercolor{footline}{fg=uaf blue,bg=uaf yellow}
+\setbeamercolor{footline}{fg=uaf blue,bg=light blue}
 \setbeamerfont{footline}{fg=black, size=\normalsize}
 
 % body colors and fonts
@@ -106,6 +105,7 @@
       \begin{column}{.15\paperwidth}
         %\begin{center}
           \includegraphics[width=0.07\paperwidth]{GI_logo_color}
+          \includegraphics[width=0.07\paperwidth]{NSF_logo_color}
        %\end{center}
         \vskip1ex
       \end{column}
@@ -122,7 +122,7 @@
       \begin{column}{.15\paperwidth}
         \vskip1cm
         %\begin{center}
-          \includegraphics[width=0.14\paperwidth]{logo_uaf}
+          \includegraphics[width=0.14\paperwidth]{UAF_logo_horiz}
         %\end{center}
         \vskip1.5cm
       \end{column}
@@ -157,7 +157,7 @@
   \end{beamercolorbox}
   
   \begin{beamercolorbox}[ht=4ex,leftskip=1cm,rightskip=1cm]{footline}%
-  This work was supported by a grant of resources from the Arctic Region Supercomputing Center at the University of Alaska Fairbanks as part of the Department of Defense High Performance Computing Modernization Program.
+  "Make everything as simple as possible, but not simpler." -- Albert Einstein (1879-1955)
     \vskip1ex
   \end{beamercolorbox}
 
