@@ -5,26 +5,37 @@
 %    University of Fairbanks Alaska
 %    andy.aschwanden@arsc.edu
 %
+%    and
+%
+%	Joseph H Kennedy
+%	Physics Department
+%	University of Alaska Fairbanks
+%	jhkennedy@alaska.edu
+
+
 % History:
 %
 %   June  09 created
-%   06/25/09 set uaf blue to caption name
-%   07/08/09 new UAF and HPCMP logos
+%   07/09/09 set uaf blue to caption name, UAF & GI logo sizes changes
+%   04/26/10 logos have relative size now
+%   06/28/11 colorscheme from Joe Ken
 
-\ProvidesPackage{beamerthemeARSCposter}
+\ProvidesPackage{beamerthemeGINASAposter} % this style was created by Andy Aschwanden
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \selectcolormodel{cmyk}
 \mode<presentation>
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % custom colors
-\definecolor{uaf yellow}{cmyk}{0,0.16,1,0} % official UAF yellow
+\definecolor{uaf yellow}{cmyk}{0,0.16,1,0}
 \definecolor{light yellow}{cmyk}{0.01,0,0.16,0}
-\definecolor{uaf blue}{cmyk}{1,0.66,0,0.02} % official UAF blue
+\definecolor{uaf blue}{cmyk}{1,0.66,0,0.02}
 \definecolor{light blue}{cmyk}{0.22,0.11,0,0}
 
 % headline colors and fonts
-\setbeamercolor{headline}{fg=white,bg=uaf yellow}
+\setbeamercolor{headline}{fg=white,bg=white}
 \setbeamercolor{title in headline}{fg=uaf blue}
 \setbeamercolor{author in headline}{fg=uaf blue}
 \setbeamercolor{institute in headline}{fg=uaf blue}
@@ -32,7 +43,7 @@
 \setbeamercolor{separation line}{bg=uaf blue}
 
 % footline colors and fonts
-\setbeamercolor{footline}{fg=uaf blue,bg=uaf yellow}
+\setbeamercolor{footline}{fg=uaf blue,bg=light blue}
 \setbeamerfont{footline}{size=\normalsize}
 
 % body colors and fonts
@@ -60,7 +71,7 @@
 \setbeamercolor{alerted text}{fg=uaf blue}
 \setbeamercolor{caption name}{fg=uaf blue}
 
-%\setbeamercolor{structure}{fg=uaf blue}
+%\setbeamercolor{structure}{fg=uafblue}
 
 %  \setbeamertemplate{itemize/enumerate body begin}{
 %  }
@@ -90,14 +101,20 @@
   \leavevmode
 
   \begin{beamercolorbox}[wd=\paperwidth]{headline}
+    \vspace{4em}
     \begin{columns}[c]
       \begin{column}{.02\paperwidth}
       \end{column}
-      \begin{column}{.175\paperwidth}
-          \includegraphics[height=7cm]{logo_arsc}
+      \begin{column}{.15\paperwidth}
+        %\begin{center}
+          \includegraphics[height=10cm]{GI_logo_color} \quad
+          \includegraphics[height=9cm]{logo_uaf}
+       %\end{center}
+%        \vskip1ex
       \end{column}
-      \begin{column}{.61\paperwidth}
-        \vskip4ex
+      \begin{column}{.68\paperwidth}
+%        \vskip4ex
+        %\raggedleft
         \begin{center}
         \usebeamercolor{title in headline}{\color{fg}\textbf{\LARGE{\inserttitle}}\\[5ex]}
         \usebeamercolor{author in headline}{\color{fg}\large{\insertauthor}\\[2ex]}
@@ -105,34 +122,51 @@
         \end{center} 
         \vskip1ex
       \end{column}
-      \begin{column}{.175\paperwidth}
-        \vskip1cm
-          \includegraphics[height=5.5cm]{logo_hpcmp}\hskip5ex     
-          \includegraphics[height=5.5cm]{logo_uaf}
+      \begin{column}{.15\paperwidth}
+%        \vskip1cm
+        %\begin{center}
+          \includegraphics[height=9cm]{nasa_logo} \quad
+          \includegraphics[height=9cm]{NSF_logo_color}
+        %\end{center}
+%        \vskip1.5cm
       \end{column}
       \begin{column}{.02\paperwidth}
       \end{column}
     \end{columns}
   \end{beamercolorbox}
   
+%%      \begin{beamercolorbox}[sep=0.1cm,wd=.1\paperwidth,center]{logo in headline}
+%%        \vskip2ex
+%%      \end{beamercolorbox}  
+%%      \begin{beamercolorbox}[sep=1cm,wd=.7\paperwidth]{headline}
+%%        \usebeamercolor{title in headline}{\raggedright\color{fg}\textbf{\LARGE{\inserttitle}}\\[1ex]}
+%%        \usebeamercolor{author in headline}{\raggedright\color{fg}\large{\insertauthor}\\[1ex]}
+%%        \usebeamercolor{institute in headline}{\raggedright\color{fg}\large{\insertinstitute}\\[1ex]}     
+%%      \end{beamercolorbox}%
+%%      \begin{beamercolorbox}[sep=0.1cm,wd=.18\paperwidth,center]{logo in headline}
+%%        \includegraphics[height=5cm]{logos/rwth-hks44}
+%%        \vskip2ex
+%%      \end{beamercolorbox}  
+%%    \end{beamercolorbox}
   
   \begin{beamercolorbox}[wd=\paperwidth]{lower separation line head}
-    \rule{0pt}{5pt}
+    \rule{0pt}{2pt}
   \end{beamercolorbox}
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \setbeamertemplate{footline}{
   \begin{beamercolorbox}[wd=\paperwidth]{upper separation line foot}
     \rule{0pt}{5pt}
   \end{beamercolorbox}
+  
   \begin{beamercolorbox}[ht=4ex,leftskip=1cm,rightskip=1cm]{footline}%
-This work was supported by a grant of HPC resources from the Arctic Region Supercomputing Center at the University of Alaska Fairbanks as part of the Department of Defense High Performance Computing Modernization Program.
+    This research is funded by NASA awards NNX13AK27G and NNX13AM16G, and by NSF award 1229716: MRI: Development of a High-power, Large Antenna Array and Ultrawideband Radar for a Basler for Sounding and Imaging of Fast-flowing Glaciers and Mapping Internal Layers.
     \vskip1ex
   \end{beamercolorbox}
 
   \begin{beamercolorbox}[wd=\paperwidth]{lower separation line foot}
-    \rule{0pt}{5pt}
+    \rule{0pt}{2pt}
   \end{beamercolorbox}
 }
 
