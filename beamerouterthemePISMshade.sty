@@ -17,7 +17,7 @@
 
 \pgfdeclarehorizontalshading[white,pism blue]{beamer@footlineshade}{3.25ex}{%
   color(0pt)=(pism blue);
-  color(\paperwidth)=(white)}
+  color(\paperwidth)=(pism blue 4)}
 
 
 
@@ -77,7 +77,7 @@
 
 
 \DeclareOptionBeamer{headline}{      
-	\defbeamertemplate*{headline}{UAFshade theme}
+	\defbeamertemplate*{headline}{PISMshade theme}
 	{
 	  \leavevmode%
 	  \hbox{%
@@ -89,7 +89,7 @@
 
 
 \DeclareOptionBeamer{footline}{      
-	\defbeamertemplate*{footline}{UAFshade theme}
+	\defbeamertemplate*{footline}{PISMshade theme}
 	{  
 	    \begin{beamercolorbox}[wd=\paperwidth,ht=.5pt]{foot line}
     		\rule{\paperwidth}{.5pt}
